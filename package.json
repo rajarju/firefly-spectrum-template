@@ -1,0 +1,35 @@
+{
+  "name": "firefly-app-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel app/index.html",
+    "build": "parcel build app/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@adobe/exc-app": "^0.2.17",
+    "@react-spectrum/button": "^3.0.0",
+    "@react-spectrum/form": "^3.0.0",
+    "@react-spectrum/layout": "^3.0.0",
+    "@react-spectrum/listbox": "^3.0.0",
+    "@react-spectrum/provider": "^3.0.0",
+    "@react-spectrum/radio": "^3.0.0",
+    "@react-spectrum/text": "^3.0.0",
+    "@react-spectrum/textfield": "^3.0.0",
+    "@react-spectrum/theme-default": "^3.0.0",
+    "@react-spectrum/view": "^3.0.0",
+    "core-js": "^3.6.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-error-boundary": "^2.2.3",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
