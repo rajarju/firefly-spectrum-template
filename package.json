@@ -14,6 +14,7 @@
   "dependencies": {
     "@adobe/exc-app": "^0.2.17",
     "@react-spectrum/button": "^3.0.0",
+    "@react-spectrum/buttongroup": "^3.0.0",
     "@react-spectrum/form": "^3.0.0",
     "@react-spectrum/layout": "^3.0.0",
     "@react-spectrum/listbox": "^3.0.0",

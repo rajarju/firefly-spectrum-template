@@ -1091,6 +1091,19 @@
     "@react-types/shared" "^3.0.0"
     "@spectrum-icons/ui" "^3.0.0"
 
+"@react-spectrum/buttongroup@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@react-spectrum/buttongroup/-/buttongroup-3.0.0.tgz#2151cad689d0f85b0655f4c39aa618702b4a3791"
+  integrity sha512-V2ZkGscWSkTdEBnbFFJohtx50YXUi2B+Q0yAc+hHUG+71w2q7mvRFDwr/hhXAgCZ9oWPGq/d8YeTKca8mp2anA==
+  dependencies:
+    "@babel/runtime" "^7.6.2"
+    "@react-aria/utils" "^3.0.0"
+    "@react-spectrum/button" "^3.0.0"
+    "@react-spectrum/text" "^3.0.0"
+    "@react-spectrum/utils" "^3.0.0"
+    "@react-types/buttongroup" "^3.0.0"
+    "@react-types/shared" "^3.0.0"
+
 "@react-spectrum/form@^3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@react-spectrum/form/-/form-3.0.0.tgz#a8374ad5e71e222e8b760590fd75ef8f68390944"
@@ -1343,6 +1356,13 @@
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@react-types/button/-/button-3.0.0.tgz#97609be5dfe649093ac676a58920b8a41abcf929"
   integrity sha512-/SLoApWMnoHUR9G92i2M654fLdxqhLgdJ7bfbok9u4NeuwVOklQtHstbAmGrMMYiMefSjQIyxYRFw7F/9L5bow==
+  dependencies:
+    "@react-types/shared" "^3.0.0"
+
+"@react-types/buttongroup@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@react-types/buttongroup/-/buttongroup-3.0.0.tgz#8915c275e476a8c6da21ec9e36f730d4d6ec00bb"
+  integrity sha512-wf9TDcBiFZTAvgU2RXKS027Acw+QDBc/GjoWM+gTFJiiAyPDv1GE/u1x2NExScAuBWoQKDf7XdwGKNLGeAryVA==
   dependencies:
     "@react-types/shared" "^3.0.0"
 

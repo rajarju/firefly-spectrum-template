@@ -57808,7 +57808,7 @@ var Sidebar = function Sidebar() {
   var navigateTo = function navigateTo(items) {
     var values = _toConsumableArray(items);
 
-    window.location.hash = "#/".concat(values[0]);
+    window.location.hash = values.length ? "#/".concat(values[0]) : window.location.hash;
   };
 
   return /*#__PURE__*/_react.default.createElement(_listbox.ListBox, {
@@ -59551,7 +59551,138 @@ function $d84be0be8cc370fcf4ad9b30ea651284$var$ClearButton(props, ref) {
 let ClearButton = _react2.default.forwardRef($d84be0be8cc370fcf4ad9b30ea651284$var$ClearButton);
 
 exports.ClearButton = ClearButton;
-},{"@spectrum-icons/ui/CrossSmall":"../node_modules/@spectrum-icons/ui/CrossSmall.js","@react-spectrum/provider":"../node_modules/@react-spectrum/provider/dist/module.js","@react-aria/button":"../node_modules/@react-aria/button/dist/module.js","@react-spectrum/text":"../node_modules/@react-spectrum/text/dist/module.js","react":"../node_modules/react/index.js","@react-aria/focus":"../node_modules/@react-aria/focus/dist/module.js","@react-spectrum/utils":"../node_modules/@react-spectrum/utils/dist/module.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","./main.css":"../node_modules/@react-spectrum/button/dist/main.css"}],"src/components/Form.js":[function(require,module,exports) {
+},{"@spectrum-icons/ui/CrossSmall":"../node_modules/@spectrum-icons/ui/CrossSmall.js","@react-spectrum/provider":"../node_modules/@react-spectrum/provider/dist/module.js","@react-aria/button":"../node_modules/@react-aria/button/dist/module.js","@react-spectrum/text":"../node_modules/@react-spectrum/text/dist/module.js","react":"../node_modules/react/index.js","@react-aria/focus":"../node_modules/@react-aria/focus/dist/module.js","@react-spectrum/utils":"../node_modules/@react-spectrum/utils/dist/module.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","./main.css":"../node_modules/@react-spectrum/button/dist/main.css"}],"../node_modules/@react-spectrum/buttongroup/dist/main.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/@react-spectrum/buttongroup/dist/module.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ButtonGroup = void 0;
+
+var _provider = require("@react-spectrum/provider");
+
+var _react2 = _interopRequireWildcard(require("react"));
+
+var _utils = require("@react-aria/utils");
+
+var _utils2 = require("@react-spectrum/utils");
+
+var _objectWithoutPropertiesLoose = _interopRequireDefault(require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose"));
+
+var _extends = _interopRequireDefault(require("@babel/runtime/helpers/esm/extends"));
+
+require("./main.css");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function $parcel$interopDefault(a) {
+  return a && a.__esModule ? a.default : a;
+} // ASSET: /Users/govett/Downloads/react-spectrum-v3/node_modules/@adobe/spectrum-css-temp/components/buttongroup/vars.css
+
+
+var $f9f91d1c186d99c6f3073$exports = {};
+$f9f91d1c186d99c6f3073$exports = {
+  "spectrum-ButtonGroup": "_spectrum-ButtonGroup_ed022",
+  "spectrum-ButtonGroup-Button": "_spectrum-ButtonGroup-Button_ed022",
+  "spectrum-ButtonGroup--alignEnd": "_spectrum-ButtonGroup--alignEnd_ed022",
+  "spectrum-ButtonGroup--alignCenter": "_spectrum-ButtonGroup--alignCenter_ed022",
+  "spectrum-ButtonGroup--vertical": "_spectrum-ButtonGroup--vertical_ed022"
+};
+var $f9f91d1c186d99c6f3073$$interop$default = $parcel$interopDefault($f9f91d1c186d99c6f3073$exports);
+
+function $acd6f0f772cf1ee18dc9ae3c3d09f4fe$var$ButtonGroup(props, ref) {
+  let {
+    scale
+  } = (0, _provider.useProvider)();
+  props = (0, _provider.useProviderProps)(props);
+  props = (0, _utils2.useSlotProps)(props, 'buttonGroup');
+  let {
+    children,
+    orientation = 'horizontal',
+    isDisabled,
+    align = 'start'
+  } = props,
+      otherProps = (0, _objectWithoutPropertiesLoose.default)(props, ["children", "orientation", "isDisabled", "align"]);
+  let {
+    styleProps
+  } = (0, _utils2.useStyleProps)(otherProps);
+  let domRef = (0, _utils2.useDOMRef)(ref);
+  let [hasOverflow, setHasOverflow] = (0, _react2.useState)(false);
+  let [dirty, setDirty] = (0, _react2.useState)(false);
+  let checkForOverflow = (0, _react2.useCallback)(() => {
+    if (domRef.current && orientation === 'horizontal') {
+      setHasOverflow(false);
+      let buttonGroupChildren = Array.from(domRef.current.children);
+      let maxX = domRef.current.offsetWidth + 1; // + 1 to account for rounding errors
+      // If any buttons have negative X positions (align="end") or extend beyond
+      // the width of the button group (align="start"), then switch to vertical.
+
+      if (buttonGroupChildren.some(child => child.offsetLeft < 0 || child.offsetLeft + child.offsetWidth > maxX)) {
+        setHasOverflow(true);
+      }
+    }
+  }, [domRef, orientation]); // On scale or children change, remove vertical orientation class via dirty = true and check for overflow
+
+  (0, _react2.useLayoutEffect)(() => {
+    if (dirty) {
+      checkForOverflow();
+      setDirty(false);
+    }
+  }, [dirty, checkForOverflow]);
+  (0, _react2.useEffect)(() => {
+    if (!dirty) {
+      setDirty(true);
+    } // Don't add dirty to dep array since it will cause infinite loop
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+
+  }, [children, scale]); // Check for overflow on window resize
+
+  (0, _react2.useEffect)(() => {
+    if (orientation !== 'vertical') {
+      // I think performance could be optimized here by creating a global, debounced hook for listening to resize
+      // events rather than creating an event-listener per component.
+      window.addEventListener('resize', checkForOverflow);
+      checkForOverflow();
+      return () => {
+        window.removeEventListener('resize', checkForOverflow);
+      };
+    }
+  }, [checkForOverflow, orientation]);
+  return /*#__PURE__*/_react2.default.createElement("div", (0, _extends.default)({}, (0, _utils.filterDOMProps)(otherProps), styleProps, {
+    ref: domRef,
+    className: (0, _utils2.classNames)($f9f91d1c186d99c6f3073$$interop$default, 'spectrum-ButtonGroup', {
+      'spectrum-ButtonGroup--vertical': orientation === 'vertical' || !dirty && hasOverflow,
+      'spectrum-ButtonGroup--alignEnd': align === 'end',
+      'spectrum-ButtonGroup--alignCenter': align === 'center'
+    }, styleProps.className)
+  }), /*#__PURE__*/_react2.default.createElement(_utils2.SlotProvider, {
+    slots: {
+      button: {
+        isDisabled,
+        UNSAFE_className: (0, _utils2.classNames)($f9f91d1c186d99c6f3073$$interop$default, 'spectrum-ButtonGroup-Button')
+      }
+    }
+  }, children));
+}
+/**
+ * ButtonGroup handles overflow for a grouping of buttons whose actions are related to each other.
+ */
+
+
+let ButtonGroup = _react2.default.forwardRef($acd6f0f772cf1ee18dc9ae3c3d09f4fe$var$ButtonGroup);
+
+exports.ButtonGroup = ButtonGroup;
+},{"@react-spectrum/provider":"../node_modules/@react-spectrum/provider/dist/module.js","react":"../node_modules/react/index.js","@react-aria/utils":"../node_modules/@react-aria/utils/dist/module.js","@react-spectrum/utils":"../node_modules/@react-spectrum/utils/dist/module.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","./main.css":"../node_modules/@react-spectrum/buttongroup/dist/main.css"}],"src/components/Form.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -59570,6 +59701,8 @@ var _textfield = require("@react-spectrum/textfield");
 var _view = require("@react-spectrum/view");
 
 var _button = require("@react-spectrum/button");
+
+var _buttongroup = require("@react-spectrum/buttongroup");
 
 var _text = require("@react-spectrum/text");
 
@@ -59595,13 +59728,13 @@ var PageForm = function PageForm() {
     value: "cats"
   }, "Cats"), /*#__PURE__*/_react.default.createElement(_radio.Radio, {
     value: "dragons"
-  }, "Dragons")), /*#__PURE__*/_react.default.createElement(_button.Button, {
+  }, "Dragons")), /*#__PURE__*/_react.default.createElement(_buttongroup.ButtonGroup, null, /*#__PURE__*/_react.default.createElement(_button.Button, {
     variant: "cta"
-  }, "Save")));
+  }, "Submit"))));
 };
 
 exports.PageForm = PageForm;
-},{"react":"../node_modules/react/index.js","@react-spectrum/form":"../node_modules/@react-spectrum/form/dist/module.js","@react-spectrum/radio":"../node_modules/@react-spectrum/radio/dist/module.js","@react-spectrum/textfield":"../node_modules/@react-spectrum/textfield/dist/module.js","@react-spectrum/view":"../node_modules/@react-spectrum/view/dist/module.js","@react-spectrum/button":"../node_modules/@react-spectrum/button/dist/module.js","@react-spectrum/text":"../node_modules/@react-spectrum/text/dist/module.js"}],"src/components/About.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","@react-spectrum/form":"../node_modules/@react-spectrum/form/dist/module.js","@react-spectrum/radio":"../node_modules/@react-spectrum/radio/dist/module.js","@react-spectrum/textfield":"../node_modules/@react-spectrum/textfield/dist/module.js","@react-spectrum/view":"../node_modules/@react-spectrum/view/dist/module.js","@react-spectrum/button":"../node_modules/@react-spectrum/button/dist/module.js","@react-spectrum/buttongroup":"../node_modules/@react-spectrum/buttongroup/dist/module.js","@react-spectrum/text":"../node_modules/@react-spectrum/text/dist/module.js"}],"src/components/About.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -59662,19 +59795,25 @@ function App() {
   return /*#__PURE__*/_react.default.createElement(_reactRouterDom.HashRouter, null, /*#__PURE__*/_react.default.createElement(_provider.Provider, {
     theme: _themeDefault.theme
   }, /*#__PURE__*/_react.default.createElement(_layout.Grid, {
-    areas: ['sidebar content'],
-    columns: ['size-3000', 'auto'],
-    rows: ['100vh'],
+    areas: ["sidebar content"],
+    columns: ["size-3000", "auto"],
+    rows: ["100vh"],
     gap: "size-100"
   }, /*#__PURE__*/_react.default.createElement(_view.View, {
     gridArea: "sidebar"
   }, /*#__PURE__*/_react.default.createElement(_Sidebar.Sidebar, null)), /*#__PURE__*/_react.default.createElement(_view.View, {
     gridArea: "content"
+  }, /*#__PURE__*/_react.default.createElement(_layout.Flex, {
+    direction: "row",
+    justifyContent: "center",
+    height: "100%"
+  }, /*#__PURE__*/_react.default.createElement(_view.View, {
+    width: "size-6000"
   }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: "/about"
   }, /*#__PURE__*/_react.default.createElement(_About.PageAbout, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: "/"
-  }, /*#__PURE__*/_react.default.createElement(_Form.PageForm, null)))))));
+  }, /*#__PURE__*/_react.default.createElement(_Form.PageForm, null)))))))));
 }
 
 var _default = App;
@@ -59730,7 +59869,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50680" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53534" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
